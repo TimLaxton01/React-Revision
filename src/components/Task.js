@@ -20,7 +20,13 @@ const taskes = [
 ];
 
 const Task = () => {
-  return <div></div>;
+  return (
+    <>
+      {taskes.map((task) => (
+        <h3>{task.text}</h3>
+      ))}
+    </>
+  );
 };
 
 export default Task;
