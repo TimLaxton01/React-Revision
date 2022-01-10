@@ -23,10 +23,19 @@ function App() {
       reminder: false,
     },
   ]);
+
+  const deleteTask = (id) => {
+    setTask(tasks.filter((task) => task.id !== id));
+  };
+
   return (
     <div className='container'>
       <Header title='Tracker' />
-      <Tasks tasks={tasks} />
+      {tasks.length > 0 ? (
+        <Tasks tasks={tasks} onDelete={deleteTask} />
+      ) : (
+        "No Tasks To Show"
+      )}
     </div>
   );
 }
