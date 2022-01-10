@@ -1,8 +1,11 @@
-import logo from "./logo.svg";
-import "./App.css";
+import Header from "./components/Header";
 
 function App() {
-  return <div className='App'>pop</div>;
+  return (
+    <div className='App'>
+      <Header title='Hello' />
+    </div>
+  );
 }
 
 export default App;
